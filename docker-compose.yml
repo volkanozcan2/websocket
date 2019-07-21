@@ -1,0 +1,11 @@
+version: '2'
+services:
+  websocket:
+    container_name: websocket
+    image: websocket:latest
+    volumes: 
+      - ${PWD}:/opt/app
+networks:
+  default:
+    external:
+      name: proxy_default
